@@ -1,0 +1,8 @@
+<div class="jumbotron text-center">
+	<div class="container">
+		<h1>Property Listings</h1>
+		<p>Best Properties options</p>
+		<a *ngIf="!(af.auth | async)" (click)="login()"><img src="assets/img/google.png" alt="Google Login"></a>
+		<a *ngIf="(af.auth | async)"[routerLink]="['/listings']">Let's get it!</a>
+	</div>
+</div>

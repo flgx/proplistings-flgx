@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-xs-12">
+		<form class="well">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search props..." [(ngModel)]="search" name="search" (keyup)="searchProps()">	
+			</div>						
+		</form>	
+	<ul class="list-group">
+		<li class="list-group-item" *ngFor="let listing of listings">
+			<a [routerLink]="['/listing/'+listing.$key]">{{listing.title}}</a>
+		</li>
+	</ul>				
+	</div>
+<div class="col-xs-12" *ngIf="count === 0">Not properties found.</div>
+</div>
+
